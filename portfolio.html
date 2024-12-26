@@ -1,0 +1,155 @@
+<!-- 
+    portfolio.html
+    Author: LaDawn Stuben
+    Date: 11/07/2024
+    Description: This page showcases my portfolio projects and skills.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Skills - LaDawn Stuben</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to JavaScript file for interactive features -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar with links to other sections -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio & Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-heading">
+            <h1>My Portfolio & Skills</h1>
+            <div class="divider"></div>
+        </div>
+        <div class="portfolio-introduction">
+            <p>As I progress in my journey as a software developer, I’ve had the privilege of working on diverse
+                projects that span different technologies. From front-end web development to back-end systems and
+                desktop applications, each project has taught me valuable lessons in problem-solving and design.</p>
+
+            <p>One of the highlights of my development experience is being able to build applications that are both
+                efficient and user-friendly. I enjoy the challenge of making technology accessible and valuable to end
+                users, ensuring that each solution serves a practical purpose.</p>
+
+            <p>My technical toolkit includes programming languages such as C# and C++, as well as web technologies like
+                HTML, CSS, and JavaScript. I also have experience working with databases, managing data, and writing SQL
+                queries. I’m constantly improving my skills and learning new technologies to stay current in this
+                rapidly changing field.</p>
+        </div>
+
+        <div class="portfolio-skills-container">
+            <!-- GitHub Projects Section -->
+            <div class="project-links">
+                <h2>GitHub Projects</h2>
+                <!-- Project 1: Household Tasks App -->
+                <div class="project">
+                    <img src="images/household-tasks.jpg" alt="Household Tasks App window screenshot"
+                        title="Household Tasks App">
+                    <p><strong>Household Tasks App:</strong> This application was created to help users manage daily
+                        household chores more efficiently. It offers an intuitive interface where users can add, view,
+                        and mark tasks as complete. The app is designed to simplify the organization of household
+                        responsibilities.</p>
+
+                    <p>Developed in C++ using the wxWidgets GUI framework, this project showcases my ability to create
+                        functional user interfaces while ensuring that data persistence is handled effectively. Users
+                        can rely on the app to store their tasks and track their progress over time.</p>
+
+                    <p>Overall, the Household Tasks App is an example of my proficiency in GUI development,
+                        object-oriented programming, and data management. It combines utility and simplicity to improve
+                        the daily lives of its users.</p>
+                    <a href="https://github.com/ladawnstuben/HouseholdTasksApp" class="btn" target="_blank"
+                        rel="noopener">View on GitHub</a>
+
+                </div>
+                <!-- Project 2: Secret Santa Engine -->
+                <div class="project">
+                    <img src="images/secret-santa.jpg" alt="Secret Santa Engine console screenshot"
+                        title="Secret Santa Engine">
+                    <p><strong>Secret Santa Engine:</strong> This project was developed to streamline the process of
+                        organizing a Secret Santa event. It allows users to add participants and automatically assigns
+                        Secret Santas, ensuring a smooth and fair distribution.</p>
+
+                    <p>The program also includes features for managing participant lists and keeping track of gift
+                        exchanges. It was built using C++, which allowed me to implement key data structures and
+                        algorithms that ensure the app runs efficiently and scales easily.</p>
+
+                    <p>This project highlights my skills in problem-solving, algorithm design, and data management. It
+                        also showcases my attention to detail and ability to build tools that solve real-world
+                        logistical challenges.</p>
+                    <a href="https://github.com/ladawnstuben/SecretSantaEngine" class="btn" target="_blank"
+                        rel="noopener">View on GitHub</a>
+
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="skills">
+                <h2>My Skills</h2>
+                <ul class="skills-list">
+                    <!-- Skill Bars dynamically filled using JavaScript -->
+                    <li class="skill">
+                        <span class="skill-name" data-skill-name="C#">C#</span>
+                        <div class="skill-bar">
+                            <div class="skill-level"></div>
+                        </div>
+                    </li>
+                    <li class="skill">
+                        <span class="skill-name" data-skill-name="C++">C++</span>
+                        <div class="skill-bar">
+                            <div class="skill-level"></div>
+                        </div>
+                    </li>
+                    <li class="skill">
+                        <span class="skill-name" data-skill-name="HTML & CSS">HTML & CSS</span>
+                        <div class="skill-bar">
+                            <div class="skill-level"></div>
+                        </div>
+                    </li>
+                    <li class="skill">
+                        <span class="skill-name" data-skill-name="JavaScript">JavaScript</span>
+                        <div class="skill-bar">
+                            <div class="skill-level"></div>
+                        </div>
+                    </li>
+                    <li class="skill">
+                        <span class="skill-name" data-skill-name="SQL">SQL</span>
+                        <div class="skill-bar">
+                            <div class="skill-level"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <!-- HTML5 validation link -->
+        <p>HTML5 Validation using <a
+                href="http://validator.w3.org/nu/?doc=http://stubenl644.macombserver.net/itwp1100/project3/portfolio.html"
+                title="HTML5 Validation" class="validation-link">W3C HTML Validator</a></p>
+        <!-- CSS validation link -->
+        <p>CSS Validation using <a
+                href="https://jigsaw.w3.org/css-validator/validator?uri=http://stubenl644.macombserver.net/itwp1100/project3/styles.css"
+                title="CSS Validation" class="validation-link">W3C CSS Validator</a></p>
+        <!-- Back to course homepage link -->
+        <p><a href="../home.htm" class="homepage-link">Back to Course Homepage</a></p>
+    </footer>
+</body>
+
+</html>

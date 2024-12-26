@@ -1,0 +1,166 @@
+<!-- 
+    index.html
+    Author: LaDawn Stuben
+    Date: 12/07/2024
+    Description: This is the homepage of my portfolio, introducing the author and showcasing a brief overview of skills and projects.
+    Adding a FAQ section to provide answers to common questions about my work and development approach for Project 3.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LaDawn Stuben Portfolio</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to external JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+    <!--FAQ functionality script-->
+    <script src="js/js12.js" defer></script>
+    <!-- Link to main JavaScript file for interactive features -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar with links to different sections of the site -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio & Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="contact-heading">
+            <h1>Welcome to My Portfolio</h1>
+            <div class="divider"></div>
+        </div>
+        <!-- Profile image and introductory text -->
+        <div>
+            <img src="images/your-image.jpg" alt="Portrait of the author smiling in front of an apple tree"
+                title="LaDawn Stuben" class="profile-image">
+        </div>
+        <div class="introduction">
+            <p>Hello! I'm LaDawn Stuben, an IT Systems Analyst and an aspiring software developer. I’m currently working
+                toward a degree in Computer Science and have a passion for creating meaningful software solutions that
+                address real-world challenges.</p>
+
+            <p>With a strong background in IT and a keen interest in software engineering, I focus on building
+                efficient, scalable systems. My aim is to bring innovation to the table by combining my technical
+                knowledge with creativity to solve problems.</p>
+
+            <p>On this portfolio website, you'll find the projects I’ve developed, the skills I’ve gained, and insights
+                into the technology industry. If you have any questions or would like to discuss a project, feel free to
+                connect through the contact page. I’m always open to collaborating with others.</p>
+        </div>
+
+<!-- FAQ Section Start -->
+<section class="faq-section">
+    <h1>Frequently Asked Questions</h1>
+    <p>
+       This FAQ section covers common questions about my projects, development approach, 
+       technologies I use, and how to collaborate or learn more. Whether you're curious about 
+       the programming languages I favor, wondering how to contribute to an open-source project 
+       I've started, or need advice on getting started with a similar career path, these FAQs 
+       aim to guide you. 
+       
+       I’ve compiled some questions below to address various aspects, from technical details 
+       about my code to best practices for beginning developers. Feel free to explore, and if 
+       you don’t find your answer here, feel free to reach out via the contact page.
+    </p>
+    <dl id="faq">
+        <dt class="hiddenAnswer">What programming languages are you most comfortable with?</dt>
+        <dd>
+            <p>I am most comfortable with C++ and Java. I also have experience with C#, Python, 
+            JavaScript and Swift, but the majority of my projects use C++. I have fallen a little in love with making iOS apps this semester, so I expect I will be spending more time with Swift in the coming year.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">Have you always wanted to be a software developer?</dt>
+        <dd>
+            <p>I have always been interested in tech, and was an early adopter in the 2000's (I was a Twitter beta tester, actually!), but I chose to go to culinary school 
+                out of high school and worked for many years as a professional pastry chef. It was a rewarding career, but hard on me physically, and I like many others decided to make a change during COVID. I was fortunate to land a job in the IT Department of a local company, where I've been working full-time for the last two years while going to school. My hope is to be hired as a programmer once I complete my BS in Computer Science in a couple years.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">How do you manage version control?</dt>
+        <dd>
+            <p>I rely on Git for version control and host most of my repositories on GitHub. This allows 
+            easy collaboration, issue tracking, and code reviews to maintain a high quality standard. I find the GitHub Large File Storage to be particularly useful when collaborating on code that uses large libraries, like wxWidgets in my Chore App. </p>
+        </dd>
+
+        <dt class="hiddenAnswer">Do you offer open-source contributions?</dt>
+        <dd>
+            <p>Yes! I’m always looking to contribute to open-source projects and encourage others to 
+            join mine. Contributing to open-source fosters community learning, improves code quality, 
+            and provides valuable feedback from other developers.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">Can I suggest new features for your projects?</dt>
+        <dd>
+            <p>Absolutely. Feel free to reach out using the contact form or by opening an issue on the 
+            project’s GitHub repository. I welcome new ideas and constructive feedback.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">What is your development environment setup?</dt>
+        <dd>
+            <p>I currently primarily work in Visual Studio Code with a customized set of extensions for 
+            linting, formatting, and debugging. I exclusively used Visual Studio the first year I was coding, and I still think it's the best for large-scale projects, but I've become attached to VS Code's lighter and more customizable extensions. I use eclipse for Java programming, and Xcode when writing apps for iOS and macOS.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">How do you approach testing?</dt>
+        <dd>
+            <p>I use automated testing frameworks like Jest (for JavaScript), 
+            and JUnit (for Java). Testing helps catch bugs early and ensures the reliability and 
+            maintainability of the codebase. As the great Professor Koss says, "Testing is free! Test early, and test often."</p>
+        </dd>
+
+        <dt class="hiddenAnswer">Do you have any recommendations for beginner developers?</dt>
+        <dd>
+            <p>Don't rely on ChatGPT too much! You may be able to complete a project, but you won't understand it if you just copy and paste from AI. Start small and build projects that interest you. Focus on learning fundamental concepts 
+            like data structures, algorithms, and clean coding practices. Don’t be afraid to ask 
+            questions, look for mentorship, and join coding communities.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">How do you handle project documentation?</dt>
+        <dd>
+            <p>I maintain README files for each project in the GitHub repositories, along with dedicated Wiki pages on GitHub 
+            when needed. I also write inline comments and use tools like JSDoc for automatic 
+            documentation generation. I find ChatGPT very useful for helping with documentation, which can sometimes be tedious and less fun than coding.</p>
+        </dd>
+
+        <dt class="hiddenAnswer">Can I fork and use your code for my own projects?</dt>
+        <dd>
+            <p>In most cases, yes. My repositories typically include an open-source license 
+            (e.g., MIT) allowing you to fork, modify, and use the code. Please review the 
+            license to ensure compliance and give appropriate credit. If you're not sure, reach out and we'll chat!</p>
+        </dd>
+    </dl>
+</section>
+<!-- FAQ Section End -->
+
+        <!-- Button linking to the portfolio page -->
+        <a href="portfolio.html" class="btn">Explore My Work</a>
+    </main>
+
+    <footer>
+        <!-- HTML5 validation link -->
+        <p>HTML5 Validation using <a
+                href="http://validator.w3.org/nu/?doc=http://stubenl644.macombserver.net/itwp1100/project3/index.html"
+                title="HTML5 Validation" class="validation-link">W3C HTML Validator</a></p>
+        <!-- CSS validation link -->
+        <p>CSS Validation using <a
+                href="https://jigsaw.w3.org/css-validator/validator?uri=http://stubenl644.macombserver.net/itwp1100/project3/styles.css"
+                title="CSS Validation" class="validation-link">W3C CSS Validator</a></p>
+        <!-- Back to course homepage link -->
+        <p><a href="../home.htm" class="homepage-link">Back to Course Homepage</a></p>
+    </footer>
+</body>
+
+</html>

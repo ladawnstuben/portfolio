@@ -1,0 +1,433 @@
+/* 
+    styles.css - Refactored
+    Author: LaDawn Stuben
+    Date: 12/10/2024
+    Description: Refactored stylesheet with improved organization, variables, and optimized styling.
+    Adding FAQ styling for Project 3.
+*/
+
+/* ================= Variables ================= */
+:root {
+    --primary-color: #00bcd4;
+    --primary-dark: #008c9e;
+    --secondary-color: #333;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --font-family: 'Open Sans', Arial, sans-serif;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --transition-ease: 0.3s ease;
+}
+
+/* ================= General Reset & Body Styles ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* ================= Header & Navigation ================= */
+header {
+    background-color: var(--secondary-color);
+    padding: 15px 0;
+    box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: background-color var(--transition-ease), color var(--transition-ease);
+}
+
+.navigation a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+/* ================= Main Content ================= */
+main {
+    max-width: 1000px;
+    margin: 50px auto;
+    background: linear-gradient(135deg, var(--background-color) 25%, #ffffff 75%);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px var(--shadow-light);
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Profile image styling */
+.profile-image {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px var(--shadow-medium);
+    margin: 1.5rem auto;
+    display: block;
+}
+
+/* ================= Buttons ================= */
+.btn,
+button[type="button"],
+button[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 20px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color var(--transition-ease), box-shadow var(--transition-ease);
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover,
+button:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* ================= Footer ================= */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: var(--secondary-color);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ================= Forms ================= */
+.contact-form,
+#project-quiz-form,
+#timeline-estimator-form {
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="date"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+#project-quiz-form select,
+#timeline-estimator-form input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    box-shadow: inset 0 1px 3px var(--shadow-light);
+    transition: border-color var(--transition-ease), box-shadow var(--transition-ease);
+}
+
+/* Focus State Styling for Form Inputs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+    outline: none;
+}
+
+/* Adjust Form Width on Larger Screens */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Refined Style for the dynamic date message */
+#dynamic-date-message {
+    font-size: 1.1em;
+    /* Subtle font increase */
+    font-weight: 600;
+    /* Slightly bold but not too heavy */
+    color: #333;
+    /* Dark text color to match other form text */
+    background-color: #f9f9f9;
+    /* Light background to keep it subtle */
+    padding: 12px 20px;
+    /* Balanced padding for a comfortable look */
+    border: 1px solid #00bcd4;
+    /* Border color matches primary theme */
+    border-radius: 10px;
+    /* Rounded corners for a softer appearance */
+    text-align: center;
+    /* Centered text */
+    margin-bottom: 20px;
+    /* Space below the message */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Light shadow for subtle depth */
+}
+
+
+/* Flexbox for Single Checkbox Items */
+.contact-form div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Grid Layout for Checkbox Group */
+.contact-form .checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* Auto-adjust columns based on content */
+    gap: 10px 20px;
+    margin-bottom: 20px;
+}
+
+/* Ensure Checkbox and Label Alignment */
+.contact-form .checkbox-group div {
+    display: flex;
+    align-items: center;
+    /* Center label vertically with the checkbox */
+    gap: 10px;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Style for the checkbox group label */
+.contact-form .checkbox-group-label {
+    font-weight: bold;
+    /* Make it bold */
+    font-size: 1.1em;
+    /* Slightly increase the font size */
+    margin-bottom: 10px;
+    /* Add spacing below the label */
+    display: block;
+    /* Ensures it takes full width above the checkboxes */
+}
+
+/* Increase Padding Above the Submit Button */
+.contact-form .btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Adjust Spacing Between Form Sections */
+article h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.article,
+#project-quiz-form,
+#timeline-estimator-form {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+/* ================= Portfolio Page Styles ================= */
+/* Styles specific to the Portfolio page */
+.project {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.05);
+}
+
+/* Flexbox container for portfolio and skills sections */
+.portfolio-skills-container {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+.project-links {
+    flex: 2;
+}
+
+.skills {
+    flex: 1;
+}
+
+/* Skill bars styling */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+
+.skill-level {
+    background-color: #00bcd4;
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.portfolio-introduction {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* ================= Blog ================= */
+.blog-heading,
+.contact-heading {
+    margin-bottom: 30px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.article,
+.timeline-estimator-form {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+#total-effort,
+#completion-date {
+    font-size: 1.2em;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+}
+/* ================= FAQ Styles ================= */
+.faq-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 0;
+    box-shadow: 0 4px 8px var(--shadow-light);
+    margin-top: 50px;
+    text-align: center;
+}
+
+.faq-section > h1 {
+    text-align: center;
+    padding-top: 20px;
+    font-family: var(--font-family);
+    font-size: 2.3em;
+    color: var(--text-color);
+    letter-spacing: 0.08em;
+}
+
+.faq-section p {
+    width: 85%;
+    margin: 20px auto;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+dl#faq {
+    display: block;
+    width: 85%;
+    margin: 30px auto;
+    padding-bottom: 20px;
+}
+
+dl#faq dt {
+    background: url("images/minus.png") left center/25px no-repeat;   
+    font-size: 1.4em;
+    display: block;
+    margin: 10px 0 10px;
+    text-indent: 60px;
+    color: var(--primary-color);
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    text-align: left;
+}
+
+dl#faq dt.hiddenAnswer {
+    background: url("images/plus.png") left center/25px no-repeat;
+}
+
+dt + dd {
+    display: none;
+}
+
+dl#faq dd p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    margin: 0 0 15px 65px;
+    font-family: var(--font-family);
+    text-align: justify;
+    color: var(--text-color);
+}

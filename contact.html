@@ -1,0 +1,129 @@
+<!-- 
+    contact.html
+    Author: LaDawn Stuben
+    Date: 11/09/2024
+    Description: Contact page, including a form for providing feedback and connecting with the author.
+    *****Added for Project 2: Form Validation and Accessibility, Date/Time Functionality, and JavaScript Interactivity*****
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LaDawn Stuben</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to JavaScript file for interactive features -->
+    <script src="js/main.js" defer></script>
+    <!-- Font Awesome for envelope icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar with links to different sections of the site -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio & Skills</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-heading">
+            <h1>Contact Me</h1>
+            <i class="fas fa-envelope"></i> <!-- Icon for visual design -->
+            <div class="divider"></div>
+        </div>
+
+        <div class="contact-introduction">
+            <!-- Introduction to the contact page -->
+            <p>If you’d like to get in touch, you’ve come to the right place! Whether you're interested in discussing a
+                potential job opportunity, a project collaboration, or just want to chat about software development, I'd
+                love to hear from you. I live in the Detroit Metro area and would love to get to know more techies
+                around town!</p>
+            <p>Feel free to use the contact form below or connect with me on LinkedIn. I'm always eager to connect with
+                other professionals and expand my network. Whether you're a fellow developer, recruiter, or just curious
+                about my work, don't hesitate to reach out. I would also love to know about any groups or meetups
+                happening in Michigan. Or heck, just tell me which cider mill has the best donuts, I am on a quest for
+                the perfect cider mill donut this year.</p>
+            <p>Your message means a lot to me, and I’ll do my best to get back to you as soon as possible. Thank you for
+                taking the time to visit my portfolio!</p>
+
+            <!-- LinkedIn link for professional networking -->
+            <p>Connect with me on <a href="https://www.linkedin.com/in/ladawnstuben/" target="_blank"
+                    rel="noopener noreferrer">LinkedIn</a>.</p>
+
+            <!-- Updated contact form for Project 2 requirements -->
+            <form class="contact-form" action="mailto:stubenl696@macomb.edu" method="POST" enctype="text/plain">
+                <p id="dynamic-date-message"></p> <!-- Placeholder for dynamic welcome message -->
+
+                <!-- Changing name field to separate first and last -->
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Adding a field for phone number -->
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="555-555-5555" required>
+
+                <!-- Adding checkboxes for user to indicate interests -->
+                <label class="checkbox-group-label">What are you interested in? (Select at least
+                    one)</label>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="option1" name="options" value="Collaboration">
+                        <label for="option1">Collaboration</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option2" name="options" value="Job Opportunity">
+                        <label for="option2">Job Opportunity</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option3" name="options" value="Michigan Meetups">
+                        <label for="option3">Michigan Meetups</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option4" name="options" value="Cider Donuts Recommendation">
+                        <label for="option4">Cider Donuts Recommendation</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="option5" name="options" value="General Inquiry">
+                        <label for="option5">General Inquiry</label>
+                    </div>
+                </div>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+
+                <button type="submit" class="btn">Send Feedback</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- HTML5 validation link -->
+        <p>HTML5 Validation using <a
+                href="http://validator.w3.org/nu/?doc=http://stubenl644.macombserver.net/itwp1100/project3/contact.html"
+                title="HTML5 Validation" class="validation-link">W3C HTML Validator</a></p>
+        <!-- CSS validation link -->
+        <p>CSS Validation using <a
+                href="https://jigsaw.w3.org/css-validator/validator?uri=http://stubenl644.macombserver.net/itwp1100/project3/styles.css"
+                title="CSS Validation" class="validation-link">W3C CSS Validator</a></p>
+        <!-- Back to course homepage link -->
+        <p><a href="../home.htm" class="homepage-link">Back to Course Homepage</a></p>
+    </footer>
+</body>
+
+</html>
